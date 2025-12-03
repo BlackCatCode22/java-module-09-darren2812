@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Weather Dashboard</title>
+    <!-- Link to the external CSS file -->
+    <!-- th:href="@{/style.css}" ensures Spring finds the file correctly -->
+    <link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+
+<div class="box">
+    <h1>Weather Dashboard</h1>
+    <p>Select a city to see the current temperature.</p>
+
+    <!-- The Form: Sends a GET request to /weather -->
+    <form action="/weather" method="get">
+        <label for="city">City:</label>
+        <select name="city" id="city">
+            <option value="Fresno">Fresno</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="New York">New York</option>
+        </select>
+        <button type="submit">Get Weather</button>
+    </form>
+
+    <!-- Placeholder for Results -->
+    <div id="result-container" th:if="${temp != null}">
+        <h3>Weather for <span th:text="${selectedCity}">City</span></h3>
+        <p>Temperature: <span th:text="${temp}">0</span>°C</p>
+        <p>Wind Speed: <span th:text="${wind}">0</span> km/h</p>
+    </div>
+</div>
+
+</body>
+</html>

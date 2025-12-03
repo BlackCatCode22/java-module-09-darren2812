@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #f9f9f9; /* Added a subtle background color */
+}
+
+select {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 5px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Styling for the result section */
+#result-container {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
